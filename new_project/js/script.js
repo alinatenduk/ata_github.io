@@ -1,82 +1,30 @@
-const SliderLine = document.querySelector('.slider__line');
-const images = document.querySelectorAll('.slider__img');
-const nextButton = document.querySelector('.button-next');
-const prevButton = document.querySelector('.button-prew');
-
-let currentIndex = 0;
-let width;
-
-function init() {
-  width = document.querySelector('.slider__block').offsetWidth;
-  SliderLine.style.width = width * images.length + 'px';
-  images.forEach(item => {
-    item.style.width = width + 'px';
-    item.style.height = 'auto';
-  });
-  rollSlider();
-}
-
-init();
-window.addEventListener('resize', init);
-
-function rollSlider() {
-  SliderLine.style.transform = 'translate(-' + currentIndex * width + 'px)';
-}
-
-function sliderNext() {
-  currentIndex++;
-  if (currentIndex >= images.length) {
-    currentIndex = 0;
-  }
-  rollSlider();
-  updateImages(); 
-}
-
-function sliderPrev() {
-  currentIndex--;
-  if (currentIndex < 0) {
-    currentIndex = images.length - 1;
-  }
-  rollSlider();
-  updateImages(); 
-}
-
-function updateImages() {
-  images.forEach((image, index) => {
-    if (index === 1 || index === 2) {
-    }
-  });
-}
-
-if (nextButton) {
-  nextButton.addEventListener('click', sliderNext);
-}
-
-if (prevButton) {
-  prevButton.addEventListener('click', sliderPrev);
-}
-
-
-images[1].style.display = 'block';
-
-
-
 
 let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-    let slides = document.querySelectorAll(".slide");
+  let slides = document.querySelectorAll(".slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  }
+  slides[slideIndex].style.display = "block";
+  setTimeout(showSlides, 4000); // Змінювати слайди кожні 4 секунди
+
+  setTimeout(() => {
     for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+      slides[i].style.opacity = 0;
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 4000); // Change slides every 4 seconds
+    slides[slideIndex].style.opacity = 1;
+  }, 100); // Додати ефект фейда через 100 мс
 }
+
+
+
+
 
 const header = document.querySelector('header');
 const nav = document.querySelector('nav');
@@ -144,4 +92,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
