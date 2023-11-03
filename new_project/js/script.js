@@ -12,14 +12,14 @@ function showSlides() {
     slideIndex = 0;
   }
   slides[slideIndex].style.display = "block";
-  setTimeout(showSlides, 4000); // Змінювати слайди кожні 4 секунди
+  setTimeout(showSlides, 4000); 
 
   setTimeout(() => {
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.opacity = 0;
     }
     slides[slideIndex].style.opacity = 1;
-  }, 100); // Додати ефект фейда через 100 мс
+  }, 100); 
 }
 
 
