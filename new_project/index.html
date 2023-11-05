@@ -48,25 +48,23 @@
     <div class="slider__block">
       <div class="slider__line">
         <div class="slide fade">
-          <img src="pictures/slide1.png" class="slider__img" alt="1">
+          <img src="slide1.png" class="slider__img" alt="1">
         </div>
         <div class="slide fade">
-          <img src="pictures/slide2.png" class="slider__img" alt="2">
+          <img src="slide2.png" class="slider__img" alt="2">
         </div>
       </div>
     </div>
     <div class="button_slider">
-      <button class="slider__button button-prew" type="button" aria-label="Previous">
-        <img src="pictures/button_left.png" alt="Previous">
+      <button class="slider__button button-prew" type="button" aria-label="Previous" onclick="prevSlide()">Previous</button>
+        <img src="left.png" alt="Previous">
       </button>
-      <button class="slider__button button-next" type="button" aria-label="Next">
-        <img src="pictures/button_right.png" alt="Next">
+      <button class="slider__button button-next" type="button" aria-label="Next" onclick="nextSlide()">Next</button>
+        <img src="right.png" alt="Next">
       </button>
     </div>
   </section>
   <script src="script.js"></script>
-  
-  
     <!-- Content -->
     <content class="content">
         <div class="content_content">
@@ -239,7 +237,6 @@
         </div>
     </div>
 </div>
-
     <!-- Modal window -->
     <div id="my_popup" class="popup">
         <div class="popup_body">
@@ -257,8 +254,6 @@
                     <input class="form_1" type="email" name="email" required>
                     <div class="popup_text">Повідомлення</div>
                     <textarea class="form_4" name="message" required placeholder="" maxlength="300"></textarea>
-
-
                     <button class="button_popup" type="submit">
                         <b class="button_popup_text">НАДІСЛАТИ</b>
                     </button>
@@ -266,9 +261,7 @@
             </div>
         </div>
     </div>
-
-
-
+    
     <script defer src="script.js"></script>
     </body>
     </html>
