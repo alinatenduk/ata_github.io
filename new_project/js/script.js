@@ -46,9 +46,6 @@ function nextSlide() {
 }
 
 
-
-
-
 const header = document.querySelector('header');
 const nav = document.querySelector('nav');
 const footer = document.querySelector('footer');
