@@ -86,17 +86,14 @@ body, html {
     z-index: 1;
     width: 100%; /* Change menu width to 100% */
   }
-
 .menu__item {
   color: #333; 
   transition: color 0.3s; 
 }
-
 /* Text style of menu items when hovering the mouse */
 .menu__item:hover {
   color: #007bff; /*New text color on hover */
 }
-
     .menu li {
       margin-top: -10px;
       display: inline-block;
@@ -183,12 +180,10 @@ body, html {
   width: 200%; /* Make room for two images */
   transition: transform ease 1s; /* Fixed animation function */
 }
-
 .slide {
   width: 50%; /* Each image takes half the width */
   display: block;
 }
-
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -211,19 +206,19 @@ body, html {
   cursor: pointer;
   display: block;
 }
-.button-next{
+.button_next{
   grid-column: 3; /* Placement of the right button in the third column */
   justify-self: start; /* Align the button to the left edge of the column */
   text-align: right;
   margin-left: -400px;
 }
-.button-prew{
+.button_prew{
   grid-column: 1; /* Placement of the left button in the first column */
   justify-self: end; /* Align the button to the right edge of the column */
   text-align: left;
   margin-left: 400px;
 }
-.button-next, .button-prew {
+.button_next, .button_prew {
   position: absolute;
   transform: translateY(-50%); /* Align them back to 50% of their own height for centering */
   margin-top: -350px;
@@ -308,7 +303,7 @@ body, html {
 }
 .menu_left.submenu {
   position: absolute;
-  bottom: -100%; /* Змініть це значення на відповідне, щоб розташувати меню внизу */
+  bottom: -100%; 
   left: 10px;
 
   padding: 10px;
@@ -650,17 +645,6 @@ body {
   opacity: 0;
   transition: opacity 0.5s;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 800px){
   .container {
@@ -1091,7 +1075,9 @@ ul {
 }
 /*slider*/
 .slider__block{
-  max-width: 100%;
+  max-width: 500px;
+  margin-left: 10px;
+  margin-top: -70px;
 }
 .slider__line{
   display: flex;
@@ -1099,31 +1085,25 @@ ul {
   left: 0;
   transition: transform else 1s;
 }
+.slider__img{
+  max-width: 400px;
+  margin-left: 10px;
+}
 .slider__button img{
-  height: 10px;
+  height: 25px;
   vertical-align: middle; 
 }
-.button_slider{
-  max-width: 300px;
-  text-align: center;
+.button_prew{
+ margin-top: -100px;
+ margin-left: -130px;
+}
+.button_next{
+  margin-top: -100px;
+  margin-right: 0px;
 }
 .slider__button{
-  width: 100%;
-  margin-top: -150px;
-}
-.button-next{
-  padding-right: 20px;
-  position: fixed;
-}
-.button-prew{
-  padding-left: 20px;
-  position: fixed;
-}
-.button-next,.button-prew {
   position: absolute;
   top: 50%; 
-  transform: translateY(-50%); 
-  padding-top: 120px;
 }
 /*content*/
 .content {
@@ -1139,7 +1119,7 @@ ul {
   list-style: none; 
   padding: 0; 
   display: flex; 
-  margin-top: 5px;
+  margin-top: 55px;
 }
 .content_list{
   font-size: 10px;
@@ -1173,7 +1153,7 @@ ul {
   float: left;
   margin-right: 3%; 
   margin-left: -290px;
-  margin-top: 30px;
+  margin-top: 75px;
 }
   .menu_left {
     list-style-type: none;
@@ -1206,7 +1186,7 @@ ul {
 }
 .icon{
   height: 70px;
-  padding-top: 50px;
+  padding-top: 95px;
   padding-left: 160px;
 }
 .price_list{
@@ -1224,7 +1204,7 @@ ul {
   justify-content: space-between; 
   align-items: center; 
   grid-template-columns: repeat(1, 1fr); 
-  margin-top: 50px;
+  margin-top: 70px;
 }
 .product{
   padding-top: -10px;
