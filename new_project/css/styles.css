@@ -1,957 +1,273 @@
-@font-face {
-  font-family: 'OpenSans';
-  src: url('fonts/OpenSans-Regular.ttf') format('truetype'); /* Specify the path to the font file */
-  font-weight: normal;
-  font-style: normal;
-}
-body {
-  font-weight: 400;
-  font-size: 16px;
-}
-header {
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
-  z-index: 1000;
-  .menu_bloc{
-    background-color: #ffffff;
-    width: 100%;
-    padding: 10px 0;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Horizontal padding, vertical padding, shadow size and color */
-  }
-  .menu_content{
-    max-width: 1220px;
-    margin: 0 auto;
-    padding: 0 15px; 
-    display: flex; /*use flex to place the logo and menu in one line */
-    justify-content: space-between; /* place the logo and menu on both sides */
-    align-items: center; /* center the content vertically */
-  }
-    .logo {
-      width: 80px;
-      height: 80px;
-    }
-    .menu{
-      font-size: 16px;
-      list-style: none;
-      ul {
-        list-style: none; /* Removes list markers */
-        padding: 0;
-        margin: 0;
-      }
-      li{
-        display: inline-block; /* Arranges menu items horizontally*/
-        margin-right: 20px;
-      }
-      a{
-        color: #6e6e6e;
-        text-decoration: none; /*Removes link underlining */
-        &:hover {
-          color: blue; /* Change the color of the text to blue when hovering */
-        }
-      }
-      .apply{
-        font-size: 16px;
-        font-family: 'OpenSans';
-        color: #f8f8f8;
-        border: none;
-        height: 40px;
-        width: 150px;
-        border-radius: 30px;
-        background-color: rgb(70, 121, 187);
-        &:hover {
-          color: rgb(27, 99, 192); /* Change the color of the text to blue when hovering */
-        }
-      }
-        /*burger*/
-        .header_burger_btn{
-          display: none;
-          position: relative;
-          width: 45px;
-          height: 35px;
-          border: none;
-          border-radius: 3px;
-          background-color: rgb(55, 135, 201);
-          span{
-            position: absolute;
-            width: 24px;
-            height: 2px;
-            background-color: rgb(255, 255, 255);
-            left: 10px;
-          }
-          :nth-child(1){
-            transform: translateY(-7px) ;
-          }       
-          :nth-child(3){
-            transform: translateY(7px) ;
-          }  
-      }
-    }
-}
-/*content-blok-a*/
-.content_blok_a{
-  height: 800px;
-  background-color: #f8f7f3;
-  display: flex; 
-  .content{
-      max-width: 1220px;
-      margin: 0 auto;
-      padding: 0 15px;
-      display: flex; /*use flex to place the logo and menu in one line */
-      justify-content: space-between; /* place the logo and menu on both sides */
-      align-items: center; /* center the content vertically */
-      flex-wrap: wrap; 
-    .left_blok{
-      margin-top: 160px;
-      margin-left: 80px;
-      flex: 1; 
-      max-width: 40%; /*  The maximum width of the left block */
-      text-align: center;
-      .title_left_blok{
-        font-weight: bold;
-        font-size: 30px;
-        font-family: 'OpenSans';
-        color: #3f3f3f;
-      }
-      .title_left_litle{
-        font-size: 16px;
-        font-family: 'OpenSans';
-        color: #6e6e6e;
-        max-width: 850px;
-        line-height: 28px;
-      }
-    }
-    .form_right {
-      .title_right_blok {
-        margin-top: 100px;
-        font-weight: bold;
-        font-size: 20px;
-        font-family: 'OpenSans';
-        color: #3f3f3f;
-      }
-      .form_input{
-        font-size: 14px;
-        font-family: 'OpenSans';
-        color: #3f3f3f;
-        margin-bottom: 10px;
-      }
-      .form_1{
-        height: 45px;
-        width: 500px;
-        border-radius: 5px;
-        border-color: #9e9e9e;
-        border-width: 1px;
-      }
-      .form_2{
-        margin-bottom: 20px;
-      }
-      .form_input{
-        margin-bottom: 10px;
-      }
-      .text_form_href{
-        text-decoration: none;
-        font-size: 16px;
-        font-family: 'OpenSans';
-        color: rgb(0, 102, 255);
-      }
-      .required{
-        width: 8px;
-        margin-left: 5px;
-      }
-      .input{
-        font-size: 14px;
-        font-family: 'OpenSans';
-        color: #f8f8f8;
-        border: none;
-        height: 45px;
-        width: 300px;
-        border-radius: 30px;
-        background-color: rgb(70, 121, 187);
-        margin: 30px 0 30px 100px;
-      }
-    }
-  }
-}
-/*block b*/
-.text_b {
-  font-size: 28px;
-  font-family: 'OpenSans';
-  text-align: center;
-}
-    .content_blok_b {
-      display: flex; /* We use Flexbox to place blocks in one row */
-      max-width: 1220px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-    .horizontal_container{
-      margin-top: 15px;
-      margin-right: 50px;
-      text-align: center;
-    }
-    .title_litle{
-      font-size: 22px;
-      font-family: 'OpenSans';
-      color: #504f4f;
-    }
-    .line {
-      border-color: rgb(44, 156, 221); 
-      width: 300px;
-      box-sizing: border-box;
-  }
-    .paragraph{
-      font-size: 16px;
-      font-family: 'OpenSans';
-      color: #6e6e6e;
-    }
-    .content_blok_b {
-      .horizontal_container {
-        display: none;
-        &:nth-child(1),
-        &:nth-child(2),
-        &:nth-child(3) {
-          display: block;
-        }
-      }
-    }
-  /*block c*/
-.blok_c{
-  margin-top: 70px;
-  height: 250px;
-  background-color: rgb(44, 156, 221);
-  display: flex;
-  font-family: 'OpenSans';
-  color: #ffffff;
-}
-    .content_blok_c {
-      display: flex;
-      justify-content: space-between;
-      max-width: 1220px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-    .horizontal_blok {
-      display: inline-block;
-      text-align: center;
-      margin: 50px;
-    }
-    .img_c1{
-      width: 70px;
-      height: 55px;
-    }
-    .number1{
-      font-size: 24px;
-      margin-top: 15px;
-    }
-    .text_c1{
-      font-size: 16px;
-      margin-top: -10px;
-    }
-/*slider*/
-.slider {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1220px;
-  height: 300px;
-  margin: 0 auto;
-  padding: 0 15px;
-  text-align: center;
-  font-family: 'OpenSans';
-  .slider_item {
-    max-width: 700px;
-    text-align: center;
-    margin: 0 auto; // Add horizontal alignment
-  }
-  .text_slick {
-    font-size: 16px;
-    color: #8a8989;
-    line-height: 28px;
-    margin-top: -20px;
-  }
-  .position {
-    font-size: 12px;
-    font-style: italic;
-    color: #8a8989;
-    margin-top: -15px;
-  }
-}
-.title_slick {
-  font-size: 28px;
-  text-align: center;
-  font-family: 'OpenSans';
-}
-.quotes {
-  width: 30px;
-  margin-left: -730px;
-}
-.quotes_rev {
-  width: 30px;
-  margin-left: 680px;
-  margin-top: -30px;
-}
-/*dot*/
-.slider-container {
-  position: relative;
-}
-.slider_nav {
-  text-align: center;
-  margin-top: 10px; 
-}
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 40px 5px;
-  background-color: #717171;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-}
-.slick-dots{
-  size: 100px;
-}
-.active {
-  background-color: #3a3a3a;
-}
-/*video*/
-.blok_video{
-  height: 800px;
-  background-color: #f8f7f3;
-  display: flex; 
-}
-.contecst{
-  max-width: 1220px;
-  margin: 0 auto;
-  padding: 0 15px;
-  text-align: center;
-  font-family: 'OpenSans';
-    .title_video{
-      margin-top: 50px;
-      font-size: 32px;
-    }
-    .text_video{
-      font-size: 16px;
-      color: #5e5e5e;
-    }
-}
-.video{
-  max-width: 1020px;
-  height: 500px;
-  margin-top: 10px;
-}
-/* our mentors */
-.content_mentors {
-  max-width: 1220px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-  .title_mentors{
-    font-size: 38px;
-    text-align: center;
-    font-family: 'OpenSans';
-  }
-  .mentor_info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .foto{
-    margin-left: 0px;
-    max-width: 500px;
-    position: relative;
-  }
-  .text {
-    margin-top: -350px;
-    flex: 1; /* Take up the entire available width of free space */
-    margin-left: 400px; 
-  }  
-  .name{
-    font-family: 'OpenSans';
-    font-size: 20px;
-    color: rgb(88, 176, 248);
-    font-weight: bold;
-    margin-top: -10px;
-  }
-  .line {
-    width: 100%; 
-    height: 1px; 
-    background-color: #ebebeb; 
-  }
-  .mentors{
-    font-family: 'OpenSans';
-    font-size: 16px;
-    color: #797979;
-  }
-/*dot */
-.slick-dot {
-  size: 20px;
-  color: #000; 
-}
-/*map*/
-.map-container {
-  width: 100%;
-  overflow: hidden;
-}
-.map {
-  width: 100%;
-  height: 400px; 
-}
-/*CTA*/
-.blok_CTA {
-  margin-top: 0;
-  height: 200px;
-  background-color: rgb(44, 159, 226);
-  display: flex;
-  font-family: 'OpenSans';
-  color: #ffffff;
-}
-.content_CTA {
-  max-width: 1220px;
-  margin: -15px auto;
-  padding: 0 15px;
-  text-align: center;
-  .horizontal_blok_CTA {
-    display: inline-block;
-    text-align: center;
-    margin: 50px;
-  }
-  .img_c{
-    margin-top: -50px;
-    width: 60px;
-  }
-  .img_c2{
-    width: 75px;
-  }
-  .text_CTA_litle
-     a {
-    color: white;
-    text-decoration: none;
-}
-}
-/*footer*/
-.footer{
-  max-width: 1220px;
-  margin: 0 auto;
-  padding: 0 15px;
-  height: 100px;
-  text-align: center;
-  font-family: 'OpenSans';
-  font-size: 16px;
-    .p_1{
-      margin-top: 50px;
-      color:  rgb(44, 156, 221);
-    }
-    .p_2{
-      margin-top: 10px;
-      color: #5e5e5e;
-      text-decoration: none;
-    }
-}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>3-ий макет (copy)</title>
+</head>
+<body>
+    <!-- Header content -->
+    <header class="header">
+        <div class="container">
+            <div>
+                <a href="#"><img class="logo" src="pictures/1.jpeg" alt="логотип"></a>
+            </div>
+            <div>
+                <h1 class="abc">Назва <br> компанії</h1>
+            </div>
+            <div class="slogan">найкрутіша компанія</div>
+            <div>
+                <a class="phone" href="tel:+74997777777">+7(499)777-77-77</a>
+                    <br>
+                <a class="phone" href="tel:+74997777777">+7(499)777-77-77</a>  
+            </div>
+            <button id="open_popup_btn" class="feedback-link"><a>Зворотній зв'язок</a></button>
+        </div>
+    </header>
+    <!-- Menu -->
+    <section class="fbx">
+        <div class="burger">
+            <span></span>
+        </div>
+        <div class="menu_container hamburger-menu">
+            <nav class="nav">
+                <ul class="menu menu__box">
+                    <li><a class="menu__item" href="#">Головна</a></li>
+                    <li><a class="menu__item" href="#">Каталог</a></li>
+                    <li><a class="menu__item" href="#">Доставка і оплата</a></li>
+                    <li><a class="menu__item" href="#">Прайс-лист</a></li>
+                    <li><a class="menu__item" href="#">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+  <!-- Slider -->
+  <section class="slider">
+    <div class="slider__block">
+      <div class="slider__line">
+            <div class="slide fade">
+                <img src="pictures/slide1.png" class="slider__img" alt="1">
+            </div>
+            <div class="slide fade">
+                <img src="pictures/slide2.png" class="slider__img" alt="2">
+            </div>
+      </div>
+    </div>
+    <div class="button_slider">
+         <button class="slider__button button_prew" type="button" aria-label="Previous" onclick="prevSlide()">
+            <img src="pictures/button_left.png" alt="Previous">
+        </button>
+        <button class="slider__button button_next" type="button" aria-label="Next" onclick="nextSlide()">
+            <img src="pictures/button_right.png" alt="Next">
+        </button>
+    </div>
+  </section>
+  <script src="script.js"></script>
+    <!-- Content -->
+    <content class="content">
+        <div class="content_content">
+            <div class="content_menu">
+                <ul class="list">
+                    <li class="content_list underline">Головна</li>
+                    <li class="content_list underline">Каталог</li>
+                    <li class="content_list">Побутова техніка</li>
+                </ul>
+            </div>
+            <!-- First column -->
+            <div class="column_leftblock">
+                <ul class="menu_left">
+                    <li class="big_list main-menu-item" id="appliances"><a href="#">Автомобілі</a>
+                        <ul class=" menu_left submenu">
+                            <li><a href="#">Підпункт 1.1</a></li>
+                            <li><a href="#">Підпункт 1.2</a></li>
+                            <li><a href="#">Підпункт 1.3</a></li>
+                            <li><a href="#">Підпункт 1.4</a></li>
+                        </ul></li>
+                    <li class="big_list main-menu-item" id="appliances"><a href="#">Побутова техніка</a>
+                        <ul class="menu_left submenu">
+                            <li><a href="#">Мікрохвильовки</a></li>
+                            <li><a href="#">Холодильники</a></li>
+                            <li><a href="#">Посудомийки</a></li>
+                            <li><a href="#">Чайники</a></li>
+                        </ul>
+                    </li>
+                    <li class="big_list main-menu-item" id="appliances"><a href="#">Мобільна техніка</a>
+                        <ul class="submenu">
+                            <li><a href="#">Підпункт 3.1</a></li>
+                            <li><a href="#">Підпункт 3.2</a></li>
+                            <li><a href="#">Підпункт 3.3</a></li>
+                            <li><a href="#">Підпункт 3.4</a></li>
+                        </ul>
+                    </li>
+                    <li class="big_list main-menu-item" id="appliances"><a href="#">Комп'ютери</a>
+                        <ul class="submenu">
+                            <li><a href="#">Підпункт 4.1</a></li>
+                            <li><a href="#">Підпункт 4.2</a></li>
+                            <li><a href="#">Підпункт 4.3</a></li>
+                            <li><a href="#">Підпункт 4.4</a></li>
+                        </ul>
+                    </li>
+                    <li class="big_list main-menu-item" id="appliances"><a href="#">Одяг</a>
+                        <ul class="submenu">
+                            <li><a href="#">Підпункт 5.1</a></li>
+                            <li><a href="#">Підпункт 5.2</a></li>
+                            <li><a href="#">Підпункт 5.3</a></li>
+                            <li><a href="#">Підпункт 5.4</a></li>
+                        </ul>
+                    </li>
+                    <li class="big_list main-menu-item" id="appliances"><a href="#">Нерухомість</a>
+                        <ul class="submenu">
+                            <li><a href="#">Підпункт 6.1</a></li>
+                            <li><a href="#">Підпункт 6.2</a></li>
+                            <li><a href="#">Підпункт 6.3</a></li>
+                            <li><a href="#">Підпункт 6.4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <img src="pictures/excel.png" class="icon" alt="Прайс-лист">
+                <p class="price_list">Прайс-лист</p>
+            </div>
+            <!-- Second column -->
+            <div class="column_centerblock">
+                <div class="product_container">
+                    <div class="product">
+                        <div class="rectangle">
+                            <img src="pictures/nophoto.png" class="foto_product" alt="Зображення">
+                            <p class="text_product"><a href="#">Найкрутіший чайник, який треба купити!</a></p>
+                            <p class="price">1900 грн</p>
+                            <a><img src="pictures/addtobasket.png" class="b" alt="Зображення"></a>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="container_product">
+                            <div class="rectangle rec_right">
+                                <img src="pictures/nophoto.png" class="foto_product" alt="Зображення">
+                                <p class="text_product"><a href="#">Найкрутіший чайник, який треба купити!</a></p>
+                                <p class="price">1900 грн</p>
+                                <a><img src="pictures/addtobasket.png" class="b" alt="Зображення"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="container_product">
+                            <div class="rectangle">
+                                <img src="pictures/nophoto.png" class="foto_product" alt="Зображення">
+                                <p class="text_product"><a href="#">Найкрутіший чайник, який треба купити!</a></p>
+                                <p class="price">1900 грн</p>
+                                <a><img src="pictures/addtobasket.png" class="b" alt="Зображення"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="container_product">
+                            <div class="rectangle reg rec_right">
+                                <img src="pictures/nophoto.png" class="foto_product" alt="Зображення">
+                                <p class="text_product"><a href="#">Найкрутіший чайник, який треба купити!</a></p>
+                                <p class="price">1900 грн</p>
+                                <a><img src="pictures/addtobasket.png" class="b" alt="Зображення"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="container_product">
+                            <div class="rectangle reg">
+                                <img src="pictures/nophoto.png" class="foto_product" alt="Зображення">
+                                <p class="text_product"><a href="#">Найкрутіший чайник, який треба купити!</a></p>
+                                <p class="price">1900 грн</p>
+                                <a><img src="pictures/addtobasket.png" class="b" alt="Зображення"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page">
+                    <ul class="number">
+                        <li class="num">1</li>
+                        <li class="num">2</li>
+                        <li class="num active">3</li>
+                        <li class="num">4</li>
+                        <li class="num">5</li>
+                        <li class="num">6</li>
+                        <li class="num">7</li>
+                    </ul>
+                </div>
+                <div class="block"></div><!-- Horizontal line -->
+                <div class="bottom_text">
+                    <div class="bottom_column"><!-- Content for the first column -->
+                        <p class="p1">
+                            Компанія "Піксель Плюс" існує більше 6 років, за цей час ми брали участь
+                            у розробці більше ніж 700 сайтів, тому можемо впевнено називати себе професіоналами.
+                            На даний момент наш колектив складається із більш ніж 30 співробітників, що працюють
+                            в двох офісах у Києві і Львові. Характерними для цього жанру мотиви: нерозділеної
+                            любові, прощання з молодістю, згасання душі.
+                        </p>
+                    </div>
+                    <div class="bottom_column"><!-- Content for the second column -->
+                        <p class="p2">
+                            Одним з основних напрямків робіт нашої компанії є пошукове
+                            просування сайтів, на даний момент ми працюємо з більш ніж
+                            150 постійними клієнтами по більш ніж 11 000 пошуковим запитам.
+                            При цьому в роботі основний акцент ми робимо на якості робіт, і так
+                            само приділяємо особисті унікальні розробки в області SEO просування.
+                            На даний момент відділ SEO складається з 9 чоловік під керівництвом
+                            ведучого спеціаліста, переважно працюючи у нашому київському офісі.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </content>
+  <!-- Footer -->
+<div class="content">
+    <div class="footer">
+        <div class="footer_text">
+            <p class="footer1">© 2012-2013 ЗАО "Компанія" <a class="email_footer" href="mailto:info@name.ua">info@name.ua</a></p>
+            <ul class="footer2">
+                <li><a class="footer_menu" href="#">Головна</a></li>
+                <li><a class="footer_menu" href="#">Каталог</a></li>
+                <li><a class="footer_menu" href="#">Доставка і оплата</a></li>
+                <li><a class="footer_menu" href="#">Прайс-лист</a></li>
+                <li><a class="footer_menu" href="#">Контакти</a></li>
+            </ul>
+            <img class="footer_logo" src="pictures/company.png" alt="картинка">
+            <div class="footer3">
+                <p><a href="#">Розробка сайту - </a><br>компанія "Піксель плюс"</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-@media only screen and (max-width: 850px) {
-  header .menu .header_burger_btn {
-    display: block;
-  }
-  .menu {
-    ul {
-      height: 280px;
-      position: absolute;
-      right: 0;
-      top: -380px;
-      left: 0;
-      background-color: rgb(255, 255, 255);
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0px 11px 10px rgba(0, 0, 0, 0.1);
-      transition: transform .5s;
-    }
-    li {
-      margin: 10px 0;
-    }
-    .apply {
-      margin-top: 10px;
-      margin-bottom: 20px;
-    }
-  }
-  .active {
-    .menu ul { 
-      top: 100px;
-    }
-    .menu li{
-      font-size: 16px;
-      font-family: 'OpenSans';
-    }
-  }
-  /*content*/
-  .content_blok_a {
-    height: 1200px;
-    background-color: #f8f7f3;
-    display: flex;
-    justify-content: center; // Center the block horizontally
-    align-items: center; // Center the block vertically
-    .content {
-      max-width: 750px;
-      margin-top: 30px;
-      display: flex; // use flex to place the logo and menu in one line
-      justify-content: space-between; // place the logo and menu on both sides
-      align-items: center; // center the content vertically
-      flex-wrap: wrap;
-      flex-direction: column; 
-      .left_blok {
-        flex: 1; //Take up 50% of the width of the container
-        max-width: 80%; 
-        margin-top: 100px;
-        margin-right: 80px;
-        text-align: center;
-        padding-left: 0;
-        .title_left_blok {
-          font-weight: bold;
-          font-size: 28px;
-          font-family: 'OpenSans';
-          color: #3f3f3f;
-        }
-        .title_left_litle {
-          font-size: 16px;
-          font-family: 'OpenSans';
-          color: #6e6e6e;
-          max-width: 100%;
-        }
-    }
-  }
- }
-.blok_c{
-  margin-top: 70px;
-  height: 250px;
-  background-color: rgb(44, 156, 221);
-  display: flex;
-  font-family: 'OpenSans';
-  color: #ffffff;
-}
-    .content_blok_c {
-      display: flex;
-      justify-content: space-between;
-      max-width: 300px;
-      margin-left: 20px;
-    }
-    .horizontal_blok {
-      display: inline-block;
-      text-align: center;
-      margin: 40px;
-    }
-    .img_c{
-      width: 70px;
-      height: 60px;
-    }
-    .number{
-      font-size: 22px;
-      margin-top: 15px;
-    }
-    .text_c{
-      font-size: 14px;
-      margin-top: -10px;
-    }
-/*slider*/
-.slider {
-  max-width: 600px;
-  margin-left: 10px;
-}
-/*video*/
-.blok_video {
-  height: 650px; 
-  background-color: #f8f7f3;
-  display: flex;
-  .contecst {
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 0 15px;
-    text-align: center;
-    font-family: 'OpenSans';
-    .title_video {
-      margin-top: 20px; 
-      font-size: 22px; 
-    .text_video {
-      font-size: 12px; 
-      color: #5e5e5e;
-    }
-  }
-  .video {
-    max-width: 100%; 
-    height: 350px; 
-  } 
-}
-}
-/*CTA*/
-.blok_CTA {
-  margin-top: 0;
-  height: 200px;
-  background-color: rgb(44, 156, 221);
-  display: flex;
-  font-family: "OpenSans";
-  color: #ffffff;
-}
-.content_CTA {
-  max-width: 1220px;
-  margin: 0 auto;
-  padding: 0 15px;
-  text-align: center;
-}
-.content_CTA .horizontal_blok_CTA {
-  display: inline-block;
-  text-align: center;
-  margin: 50px;
-}
-/*footer*/
-.footer {
-  max-width: 750px;
-  height: 100px;
-}
-.footer .p_1 {
-  margin-top: 50px;
-  color: rgb(44, 156, 221);
-}
-.footer .p_2 {
-  margin-top: 10px;
-  color: #5e5e5e;
-  text-decoration: none;
-}
-}
+    <!-- Modal window -->
+    <div id="my_popup" class="popup">
+        <div class="popup_body">
+            <div class="popup_content">
+                <button id="close_popup_btn" class="close_my_popup">
+                    <img src="pictures/x.jpeg" class="x" alt="Закрити popup">
+                </button>
+                <div class="popup_title">ЗВОРОТНІЙ ЗВ'ЯЗОК</div>
+                <form class="form">
+                    <div class="popup_text name">Ваше ім'я</div>
+                    <input class="form_1" type="text" name="name" required>
+                    <div class="popup_text">Телефон</div>
+                    <input class="form_1" type="text" name="phone" required>
+                    <div class="popup_text">Email</div>
+                    <input class="form_1" type="email" name="email" required>
+                    <div class="popup_text">Повідомлення</div>
+                    <textarea class="form_4" name="message" required placeholder="" maxlength="300"></textarea>
 
-@media only screen and (max-width: 320px) {
-  body {
-    overflow-x: hidden;
-  }
-  .content_blok_a {
-    height: 1550px;
-    background-color: #f8f7f3;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    .content {
-      max-width: 750px;
-      margin-top: 30px;
-      display: flex; // use flex to place the logo and menu in one line
-      justify-content: space-between; // place the logo and menu on both sides
-      align-items: center; // center the content vertically
-      flex-wrap: wrap;
-      flex-direction: column; 
-      .left_blok {
-        flex: 1; 
-        max-width: 80%; //The maximum width of the left block
-        margin-top: 100px;
-        margin-right: 80px;
-        text-align: center;
-        padding-left: 0;
-        .title_left_blok {
-          font-weight: bold;
-          font-size: 28px;
-          font-family: 'OpenSans';
-          color: #3f3f3f;
-        }
-        .title_left_litle {
-          font-size: 16px;
-          font-family: 'OpenSans';
-          color: #6e6e6e;
-          max-width: 100%;
-        }
-    }
-      .form_right {
-        margin-left: 50px;
-        .form_input {
-          font-size: 12px;
-          font-family: 'OpenSans';
-          color: #3f3f3f;
-          margin-bottom: 5px;
-        }
-        .form_1 {
-          height: 35px;
-          width: 250px;
-          border-radius: 5px;
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-          border-width: 1px;
-        }
-        .form_2 {
-          margin-bottom: 10px;
-        }
-        .form_input {
-          margin-bottom: 5px;
-        }
-        .text_form{
-          font-family: 'OpenSans';
-          font-size: 12px;
-        }
-        .text_form_href {
-          text-decoration: none;
-          font-size: 12px;
-          color: rgb(70, 121, 187);
-        }
-        .input {
-          font-size: 12px;
-          font-family: 'OpenSans';
-          color: #f8f8f8;
-          border: none;
-          height: 45px;
-          width: 250px;
-          border-radius: 30px;
-          background-color: rgb(70, 121, 187);
-          margin: 20px 10px;
-        }
-      }
-    }
-  }
-  @media (max-width: 320px) {
-    .horizontal_container {
-      width: 100%;
-    }
-  }
-/* block c */
-.blok_c {
-  margin-top: 20px;
-  height: 350px;
-}
-.content_blok_c {
-  display: flex;
-  justify-content: space-between;
-  max-width: 560px;
-  margin: 10px auto;
-  padding: 0 15px;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.horizontal_blok {
-  flex: 0 0 calc(50% - 20px);
-  text-align: center;
-  margin: 5px;
-  box-sizing: border-box; 
-}
-.right{
-  margin-top: -150px;
-  margin-left: 150px;
-}
-.img_c {
-  width: 70px;
-  height: 60px;
-}
-.number {
-  font-size: 16px;
-  margin-top: 5px;
-}
-.text_c {
-  font-size: 10px;
-  margin-top: -5px;
-}
-/*slik slider*/
-.slider {
-  height: 500px;
-  .slider_item {
-    max-width: 250px;
-    text-align: center;
-    margin: 0 auto;
-  }
-  .text_slick {
-    font-size: 16px;
-    color: #8a8989;
-    line-height: 28px;
-    margin-top: -20px;
-  }
-  .position {
-    font-size: 12px;
-    font-style: italic;
-    color: #8a8989;
-    margin-top: -15px;
-  }
-}
-.title_slick {
-  font-size: 24px;
-  text-align: center;
-  font-family: 'OpenSans';
-}
-.quotes {
-  width: 25px;
-  margin-left: -255px;
-}
-.quotes_rev {
-  width: 25px;
-  margin-left: 230px;
-  margin-top: -80px;
-}
-  /*video*/
-  .blok_video {
-    height: auto; 
-    background-color: #f8f7f3;
-    display: flex;
-    .contecst {
-      max-width: 280px;
-      margin: 0 auto;
-      padding: 0 15px;
-      text-align: center;
-      font-family: 'OpenSans';
-      .title_video {
-        margin-top: 20px; 
-        font-size: 22px; 
-      .text_video {
-        font-size: 12px; 
-        color: #5e5e5e;
-      }
-    }
-    .video {
-      max-width: 280px; 
-      height: 150px; 
-    } 
-  }
-}
-/* our mentors */
-.content_mentors {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-  .title_mentors{
-    font-size: 24px;
-    text-align: center;
-    font-family: 'OpenSans';
-  }
-  .mentor_info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .foto{
-    margin-left: 70px;
-    max-width: 150px;
-  }
-  .text {
-    margin-top: 20px;
-    flex: 1; /*Take up the entire available width of free space */
-    margin-left: 15px; /* Add the desired margin between the image and the text */
-  }  
-  .name{
-    font-family: 'OpenSans';
-    font-size: 20px;
-    color: rgb(88, 176, 248);
-    font-weight: bold;
-    margin-top: -10px;
-    text-align: center;
-  }
-  .line {
-    width: 100%; 
-    height: 1px; 
-    background-color: #ebebeb; 
-  }
-  .mentors{
-    font-family: 'OpenSans';
-    font-size: 16px;
-    color: #797979;
-    text-align: center;
-  }
-/*dot*/
-.slick-dots {
-  text-align: center;
-  margin-top: 20px; 
-  li {
-    display: inline-block;
-    margin: 0 10px; 
-  }
-  button { 
-    display: block;
-    width: 10px; 
-    height: 10px; 
-    padding: 5px;
-    color: #797878;
-    background-color: #bebebe;
-    border: 1px solid #bebebe;
-    border-radius: 50%;
-    cursor: pointer; 
-    &.slick-active {
-      background-color: #000;
-      color: #fff;
-    }
-  }
-}
-/*CTA*/
-.blok_CTA {
-  margin-top: 0;
-  height: 300px;
-  background-color: rgb(44, 159, 226);
-  display: flex;
-  font-family: 'OpenSans';
-  color: #ffffff;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
-}
-.content_CTA {
-  max-width: 320px;
-  margin: 0 auto;
-  padding: 0 15px;
-  text-align: center;
-  display: flex;
-  flex-direction: column; /* Changed direction to a vertical column */
-  align-items: center; /* Center the items horizontally */
-  .horizontal_blok_CTA {
-    margin: 20px 0; /* Changed margin */
-  }
-  .img_c {
-    width: 45px;
-    height: 45px;
-    margin-bottom: 10px;
-  }
-  .text_CTA {
-    margin-top: 5px;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .text_CTA_litle {
-    margin-top: 5px;
-    margin-left: 0;
-    font-size: 12px;
-  }
-  .left {
-    margin-left: -130px;
-    margin-top: 10px;
-  }
-  .left2 {
-    margin-left: -140px;
-    margin-top: 20px;
-  }
-  .rig, .rig2{
-    margin-top: -110px;
-    margin-left: 150px;
-  }
-}
-    /*footer*/
-    .footer{
-      max-width: 320px;
-      height: 70px;
-      font-size: 14px;
-        .p_1{
-          margin-top: 50px;
-          color:  rgb(44, 156, 221);
-        }
-        .p_2{
-          margin-top: 50px;
-          color: #5e5e5e;
-          text-decoration: none;
-        }
-    }
-}
-@media (max-width: 850px) {
-  .content_blok_b {
-    flex-wrap: wrap;
-    .horizontal_container {
-      flex: 0 0 calc(50% - 25px);
-      margin-right: 0;
-      display: none;
-    }
-    .horizontal_container:nth-child(2n-1) {
-      display: block;
-    }
-    .horizontal_container:nth-child(2n) {
-      margin-right: 50px; 
-      display: block;
-    }
-  }
-}
+
+                    <button class="button_popup" type="submit">
+                        <b class="button_popup_text">НАДІСЛАТИ</b>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script defer src="script.js"></script>
+    </body>
+    </html>
+    
