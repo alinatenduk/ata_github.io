@@ -799,87 +799,138 @@ body {
   width: 100%;
 }
 .content_content{
-  margin-top: -360px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 10px; /* Add margins if necessary */
+  display: flex;
+  margin-top: -350px;
 }
 .content_menu{
   text-align: left;
+  margin-left: 100px;
 }
 .list{
-  list-style: none; 
-  padding: 0; 
-  display: flex; 
+  list-style: none; /* We delete the markers of the list */
+  padding: 0; /* We remove the internal indents of the list */
+  display: flex; /* We install a flexible container for horizontal placementя */
   margin-top: 5px;
-}
-.content_list{
-  font-size: 14px;
 }
 .litle_list.underline{
   text-decoration: underline;
 }
 .list li {
   margin-right: 10px;
-  position: relative; 
+  position: relative; /* We set the position for adding separators */
 }
 .list li::after {
-  content: "/"; 
+  content: "/"; /* We add a slash as the content of the pseudo-element */
   position: absolute;
-  right: -7px; 
-  top: 50%; 
-  transform: translateY(-50%); 
+  right: -7px; /* Separator location */
+  top: 50%; /* Vertical positioning of the separator */
+  transform: translateY(-50%); /* We center the separator vertically */
 }
+/* Free float the container to align it to its contents */
 .container_product::after {
   content: "";
   display: table;
   clear: both;
 }
+/* Free float the container to align it to its contents*/
 .container_product::after {
   content: "";
   display: table;
   clear: both;
 }
-.column_leftblock{
-  width: 20%; 
+.column_leftblock {
+  width: 20%;
   float: left;
-  margin-right: 3%;
+  margin-right: -100px;     
   margin-left: -300px;
   margin-top: 30px;
 }
 .menu_left {
   list-style-type: none;
   padding-left: 40px;
+  list-style: none;
+  padding: 0;
+}
+.menu li {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+.menu_left .big_list {
+  position: relative;
+}
+.menu_left .big_list:hover .submenu {
+  display: block;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 10px;
+}
+.menu_left.submenu {
+  position: absolute;
+  bottom: -100%; 
+  left: 10px;
+
+  padding: 10px;
+  display: none;
+}
+.menu li:hover .submenu {
+  display: block;
+}
+.main-menu-item:hover ~ * {
+  margin-top: 110px;
+}
+.main-menu-item:hover ~ * + .big_list {
+  margin-top: 20px;
+}
+.menu_left ul {
+  display: none;
+  position: absolute;
+  background: white;
+  z-index: 1;
+}
+.menu_left li:hover ul {
+  display: block;
 }
 .menu_left a {
-  text-decoration: none; 
-  color: #000; 
+  text-decoration: none;
+  color: #000;
 }
 .menu_left li:hover .litle_list {
   display: block;
 }
-.big_list{
+.big_list {
   text-align: left;
-  margin: 10px 100px;
-  font-size: 16px;
-  line-height: 18px;
+  margin: 10px 0px;
+  font-size: 18px;
   list-style: none;
-  color: #4e4e4e; 
+  color: #4e4e4e;
   font-family: 'PT Sans', sans-serif;
+  line-height: 22px;
 }
-.litle_list{
+.litle_list {
   display: none;
   font-size: 16px;
-  color: #4e4e4e; 
+  color: #4e4e4e;
   font-family: 'PT Sans', sans-serif;
   line-height: 22px;
 }
 .icon{
   height: 80px;
-  padding-top: 50px;
-  padding-left: 160px;
+  padding-top: 120px;
+  padding-left: 0px;
 }
 .price_list{
   font-size: 12px;
   margin-top: 5px;
-  padding-left: 170px;
+  padding-left: 0px;
 }
 .column_centerblock{
   width: 50%; 
@@ -1055,13 +1106,6 @@ ul {
 
 
 }
-
-
-
-
-
-
-
 
 
 
@@ -1177,7 +1221,6 @@ ul {
 .slider__img {
   width: 200%; /* Each image takes half the width */
   display: block;
-  margin-top: 10px;
 }
 .slider__button img{
   height: 50px;
@@ -1204,87 +1247,137 @@ ul {
   width: 100%;
 }
 .content_content{
-  margin-top: -380px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 10px; /* Add margins if necessary */
+  display: flex;
+  margin-top: -350px;
 }
 .content_menu{
   text-align: left;
+  margin-left: -10px;
 }
 .list{
-  list-style: none; 
-  padding: 0; 
-  display: flex; 
+  list-style: none; /* We delete the markers of the list */
+  padding: 0; /* We remove the internal indents of the list */
+  display: flex; /* We install a flexible container for horizontal placementя */
   margin-top: 5px;
-}
-.content_list{
-  font-size: 14px;
 }
 .litle_list.underline{
   text-decoration: underline;
 }
 .list li {
   margin-right: 10px;
-  position: relative; 
+  position: relative; /* We set the position for adding separators */
 }
 .list li::after {
-  content: "/"; 
+  content: "/"; /* We add a slash as the content of the pseudo-element */
   position: absolute;
-  right: -7px; 
-  top: 50%; 
-  transform: translateY(-50%); 
+  right: -7px; /* Separator location */
+  top: 50%; /* Vertical positioning of the separator */
+  transform: translateY(-50%); /* We center the separator vertically */
 }
+/* Free float the container to align it to its contents */
 .container_product::after {
   content: "";
   display: table;
   clear: both;
 }
+/* Free float the container to align it to its contents*/
 .container_product::after {
   content: "";
   display: table;
   clear: both;
 }
-.column_leftblock{
-  width: 20%; 
+.column_leftblock {
+  width: 20%;
   float: left;
-  margin-right: 3%;
+  margin-right: -100px;     
   margin-left: -300px;
   margin-top: 30px;
 }
 .menu_left {
   list-style-type: none;
-  padding-left: 40px;
+  list-style: none;
+  padding: 0;
+}
+.menu li {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+.menu_left .big_list {
+  position: relative;
+}
+.menu_left .big_list:hover .submenu {
+  display: block;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: #fff;
+  padding: 10px;
+  font-size: 14px;
+}
+.menu_left.submenu {
+  position: absolute;
+  bottom: -100%; 
+  left: 10px;
+
+  padding: 10px;
+  display: none;
+}
+.menu li:hover .submenu {
+  display: block;
+}
+.main-menu-item:hover ~ * {
+  margin-top: 110px;
+}
+.main-menu-item:hover ~ * + .big_list {
+  margin-top: 20px;
+}
+.menu_left ul {
+  display: none;
+  position: absolute;
+  background: white;
+  z-index: 1;
+}
+.menu_left li:hover ul {
+  display: block;
 }
 .menu_left a {
-  text-decoration: none; 
-  color: #000; 
+  text-decoration: none;
+  color: #000;
 }
 .menu_left li:hover .litle_list {
   display: block;
 }
-.big_list{
+.big_list {
   text-align: left;
-  margin: 10px 100px;
-  font-size: 16px;
-  line-height: 18px;
+  margin: 10px 0px;
+  font-size: 18px;
   list-style: none;
-  color: #4e4e4e; 
+  color: #4e4e4e;
   font-family: 'PT Sans', sans-serif;
+  line-height: 22px;
 }
-.litle_list{
+.litle_list {
   display: none;
   font-size: 16px;
-  color: #4e4e4e; 
+  color: #4e4e4e;
   font-family: 'PT Sans', sans-serif;
   line-height: 22px;
 }
 .icon{
   height: 80px;
-  padding-top: 50px;
-  padding-left: 160px;
+  padding-top: 120px;
+  padding-left: 0px;
 }
 .price_list{
   font-size: 12px;
   margin-top: 5px;
-  padding-left: 170px;
+  padding-left: 0px;
 }
 .column_centerblock{
   width: 50%; 
@@ -1468,14 +1561,6 @@ ul {
 
 
 
-
-
-
-
-
-
-
-
 @media (max-width: 480px){
   .container {
     text-align: center;
@@ -1515,9 +1600,8 @@ ul {
 }
 /*slider*/
 .slider__block{
-  max-width: 500px;
-  margin-left: 10px;
-  margin-top: -70px;
+  max-width: 100%;
+  margin-top: -50px;
 }
 .slider__line{
   display: flex;
@@ -1525,25 +1609,30 @@ ul {
   left: 0;
   transition: transform else 1s;
 }
-.slider__img{
-  max-width: 400px;
-  margin-left: 10px;
+.slider__img {
+  width: 200%; /* Each image takes half the width */
+  display: block;
+  margin-top: 10px;
 }
 .slider__button img{
-  height: 25px;
+  height: 35px;
   vertical-align: middle; 
 }
-.button_prew{
- margin-top: -100px;
- margin-left: -130px;
-}
-.button_next{
-  margin-top: -100px;
-  margin-right: 0px;
+.button_slider{
+  max-width: 150px;
+  text-align: center;
 }
 .slider__button{
+  width: 70%;
+  margin-top: -550px;
+  margin-left: 50px;
+}
+.button-next,
+.button-prew {
   position: absolute;
-  top: 50%; 
+  top: 150%; 
+  transform: translateY(-50%); 
+  padding-top: 0px;
 }
 /*content*/
 .content {
