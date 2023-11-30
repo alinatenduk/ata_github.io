@@ -2219,7 +2219,6 @@ ul {
   font-size: 10px;
   font-family: 'PT Sans', sans-serif;
 }
-/*modal window*/
 body {
   overflow-x: hidden; 
 }
@@ -2230,11 +2229,11 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   top: 0;
   left: 0;
-  z-index: 999989999999999;
+  z-index: 98589658999989999999999;
   overflow: auto;
   visibility: hidden;
   opacity: 0;
-  transition: opacity .4s, visibily.4s;
+  transition: opacity .4s, visibility .4s; /* Fix the typo here */
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -2258,40 +2257,40 @@ body {
   right: -20px;
   top: -20px;
 }
-.x{
+.x {
   height: 20px;
 }
-.popup_title{
+.popup_title {
   text-align: center;
   padding-top: 5px;
   font-size: 16px;
   margin: 0px 0px 1em 0px;
   font-family: 'PT Sans', sans-serif;
 }
-.popup_text.name{
+.popup_text.name {
   padding-top: 10px;
 }
-.popup_text{
+.popup_text {
   text-align: center;
   padding-top: 5px;
   font-size: 10px;
   font-family: 'PT Sans', sans-serif;
 }
-.form{
+.form {
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 10px;
 }
-.form_1, .form_2, .form_3{
+.form_1, .form_2, .form_3 {
   height: 15px;
   width: 180px;
 }
-.form_4{
+.form_4 {
   height: 70px;
   width: 180px;
   position: relative;
 }
-.button_popup{
+.button_popup {
   width: 100px;
   height: 25px;
   margin-top: 30px;
@@ -2299,7 +2298,7 @@ body {
   background-color: #757575;
   border: none;
 }
-.button_popup_text{
+.button_popup_text {
   padding-top: 40px;
   padding-left: 0px;
   color: #ffffff;
@@ -2309,7 +2308,6 @@ body {
   display: none;
   opacity: 0;
   transition: opacity 0.5s;
-}
 }
 
 
@@ -2346,4 +2344,5 @@ body {
       margin-top: 60px;
       margin-left: 400px;
   }
+}
 }
