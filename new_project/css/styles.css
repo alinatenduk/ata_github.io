@@ -1547,8 +1547,40 @@ ul {
 }
 
 
-
-
+@media screen and (min-width: 500px) and (max-width: 760px) {
+  .container {
+    max-width: 620px;
+    overflow-x: hidden;
+  }
+  .logo{
+      height: 70px;
+  }
+  .abc{
+      font-size: 21px;
+      line-height: 20px;
+      margin-top: 5px;
+  }
+  .slogan {
+    font-size: 13px;
+    margin-top: 55px;
+    margin-left: -100px;
+    display: inline-block; /* Розміщує блок в один рядок */
+    white-space: nowrap; /* Запобігає переносу тексту на новий рядок */
+}
+  .phone {
+      font-size: 22px;
+      line-height: 26px;
+      margin-top: 5px;
+      margin-left: 170px;
+      text-transform: uppercase; 
+  }
+  .feedback-link{
+    font-size: 15px;
+    line-height: 26px;
+    margin-top: 65px;
+    margin-left: 450px;
+}
+}
 
 @media  (max-width: 630px) {
   .container {
