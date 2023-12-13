@@ -32,7 +32,8 @@ body, html {
   font-family: 'PT Sans', sans-serif;
   font-size: 20px;
   margin-top: 80px;
-  margin-left: -150px;
+  margin-left: -175px;
+  white-space: nowrap;
 }
 .phone {
   text-decoration: none;
@@ -55,7 +56,7 @@ body, html {
   font-size: 22px;
   color:rgb(91, 91, 91);
   font-family: 'PT Sans', sans-serif;
-  margin-left: 770px;
+  margin-left: 800px;
   margin-top: 80px;
   text-decoration: underline dotted;
   border: none;
@@ -245,6 +246,10 @@ body, html {
   padding: 0; /* We remove the internal indents of the list */
   display: flex; /* We install a flexible container for horizontal placementя */
   margin-top: 5px;
+}
+.content_list{
+  display: inline-block; /* Розміщує блок в один рядок */
+  white-space: nowrap; /* Запобігає переносу тексту на новий рядок */
 }
 .litle_list.underline{
   text-decoration: underline;
@@ -649,17 +654,73 @@ body {
   transition: opacity 0.5s;
 }
 
+@media  (min-width: 1001px) and (max-width: 1405px) {
+/*footer*/
+.content {
+ margin-top: 200px;
+}
+.footer {
+  height: 200px;
+  background: rgb(99, 99, 99);
+  display: flex;
+  justify-content: space-between; 
+}
+.footer_text{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 10px; /* Add margins if necessary */
+  display: flex;
+}
+.footer1, .footer-menu, .footer2 {
+  flex: 1;
+}
+.footer1{
+  margin-left: -100px;
+  margin-top: 30px;
+  text-align: left;
+  color: #fff; 
+  font-size: 14px;
+  font-family: 'PT Sans', sans-serif;
+}
+ul {
+  list-style-type: none;
+}
+.footer2 {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 25px;
+  font-size: 18px;
+}
+.footer_menu{
+  color: #fff; 
+  font-size: 10px;
+  line-height: 16px;
+}
+.footer_logo{
+  margin-top: 30px;
+  margin-left: 60px;
+  height: 20px;
+}
 
-
-
-
-
-
-
-
-
-
-
+.footer3 {
+  margin-top: 30px;
+  margin-left: 10px;
+  text-align: left;
+  color: #fff; 
+  font-size: 14px;
+  font-family: 'PT Sans', sans-serif;
+  .a{
+    font-size: 14px;
+  }
+}
+.footer3 a{
+  margin-top: 30px;
+  text-align: left;
+  color: #fff;
+  font-size: 10px;
+  font-family: 'PT Sans', sans-serif;
+}
+}
 
 
 @media  (min-width: 800px) and (max-width: 1000px) {
@@ -990,7 +1051,7 @@ margin-top: 20px;
   margin-right: 20px; 
 }
 .page{
-  margin-left: 200px;
+  margin-left: 20px;
   display: flex;
   justify-content: center; 
   align-items: center; 
@@ -1011,31 +1072,21 @@ margin-top: 20px;
   font-weight: bold;
   margin-top: -4px;
 }
+.bottom_text{
+  margin-left: -150px;
+  margin-right: -190px;
+}
 .block {
   border-bottom: 1px solid #8d8d8d; 
-  padding-top: 40px;
-  width: 450px; 
-  margin-left: 100px;
+  padding-top: 20px;  
+  width: 700px; 
+  margin-left: -150px;
 }
-.bottom_text {
-  display: flex; 
+.p1, .p2{
+  font-size: 14px;
+  margin-top: 30px;
 }
-.bottom_column {
-  flex: 50%; 
-  padding-left: 0px; 
-}
-.p1 {
-  margin-top: 20px;
-  flex: 3; 
-  margin-left: 101px;
-  margin-right: 100px;
-}
-.p2 {
-  margin-top: 20px;
-  flex: 7; 
-  margin-left: 10px;
-  margin-right: -100px;
-}
+
 /*footer*/
 * {
   margin: 0;
@@ -1063,7 +1114,7 @@ margin-top: 20px;
   margin-top: 30px;
   text-align: left;
   color: #fff; 
-  font-size: 10px;
+  font-size: 14px;
   font-family: 'PT Sans', sans-serif;
 }
 ul {
@@ -1074,6 +1125,7 @@ ul {
   margin-left: 10px;
   margin-top: 25px;
   font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
 }
 .footer_menu{
   color: #fff; 
@@ -1090,22 +1142,40 @@ ul {
   margin-left: 10px;
   text-align: left;
   color: #fff; 
-  font-size: 10px;
+  font-size: 14px;
   font-family: 'PT Sans', sans-serif;
 }
 .footer3 a{
   margin-top: 30px;
   text-align: left;
   color: #fff;
-  font-size: 10px;
+  font-size: 14px;
   font-family: 'PT Sans', sans-serif;
 }
-
 }
 
-
-
-
+@media (min-width: 1000px) and (max-width: 1100px) {
+  .page{
+    margin-left: -220px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+  .bottom_text{
+    margin-left: -200px;
+    margin-right: 60px;
+  }
+  .block {
+    border-bottom: 1px solid #8d8d8d; 
+    padding-top: 20px;  
+    width: 750px; 
+    margin-left: -140px;
+  }
+  .p1, .p2{
+    font-size: 14px;
+    margin-top: 30px;
+  }
+}
 
 
 @media  (max-width: 800px) {
@@ -1434,7 +1504,7 @@ margin-top: 20px;
   margin-right: 20px; 
 }
 .page{
-  margin-left: 200px;
+  margin-left: 220px;
   display: flex;
   justify-content: center; 
   align-items: center; 
@@ -1455,30 +1525,24 @@ margin-top: 20px;
   font-weight: bold;
   margin-top: -4px;
 }
-.block {
-  border-bottom: 1px solid #8d8d8d; 
-  padding-top: 40px;
-  width: 450px; 
-  margin-left: 100px;
-}
 .bottom_text {
-  display: flex; 
+  display: flex;
+  margin-left: -10px;
+  margin-right: -250px;
 }
 .bottom_column {
-  flex: 50%; 
-  padding-left: 0px; 
+  flex: 1;
+  width: 100%; /* Розтягнути блок на всю ширину */
 }
-.p1 {
-  margin-top: 20px;
-  flex: 3; 
-  margin-left: 101px;
-  margin-right: 100px;
+.block {
+  border-bottom: 1px solid #8d8d8d; 
+  padding-top: 20px;  
+  width: 600px; 
+  margin-left: 0px;
 }
-.p2 {
-  margin-top: 20px;
-  flex: 7; 
-  margin-left: 10px;
-  margin-right: -100px;
+.p1, .p2{
+  font-size: 14px;
+  margin-top: 30px;
 }
 /*footer*/
 * {
@@ -1580,9 +1644,29 @@ ul {
     margin-top: 65px;
     margin-left: 450px;
 }
+.bottom_text {
+  display: flex;
+  margin-left: -10px;
+  margin-right: -250px;
+}
+.bottom_column {
+  flex: 1;
+  width: 100%; /* Розтягнути блок на всю ширину */
+}
+.block {
+  border-bottom: 1px solid #8d8d8d; 
+  padding-top: 20px;  
+  width: 600px; 
+  margin-left: 0px;
+}
+.p1, .p2{
+  font-size: 14px;
+  margin-top: 30px;
+}
 }
 
-@media  (max-width: 630px) {
+
+@media  (max-width: 640px) {
   .container {
     max-width: 520px;
     overflow-x: hidden;
@@ -1629,10 +1713,12 @@ ul {
   list-style: none; 
   padding: 0; 
   display: flex; 
-  margin-top: 55px;
+  margin-top: 65px;
 }
 .content_list{
   font-size: 10px;
+  display: inline-block; /* Розміщує блок в один рядок */
+  white-space: nowrap; /* Запобігає переносу тексту на новий рядок */
 }
 .litle_list.underline{
   text-decoration: underline;
@@ -1800,18 +1886,6 @@ margin-top: 20px;
   flex: 50%;
   padding: 0px;
 }
-.p1 {
-  flex: 3;
-  margin-top: 20px;
-  margin-left: 101px;
-  font-size: 12px;
-}
-.p2 {
-  flex: 7;
-  margin-top: 20px;
-  margin-left: 50px;
-  font-size: 12px;
-}
 /*modal window*/
 body {
   overflow-x: hidden; 
@@ -1906,7 +1980,36 @@ body {
 }
 
 
-
+@media (min-width: 481px) and (max-width: 640px) {
+  .page{
+    margin-left: 130px;
+    margin-top: 20px;
+  }
+  .bottom_text {
+    display: flex;
+    justify-content: center; /* Center the columns horizontally */
+    margin-left: -20px; /* Adjust this value as needed */
+    margin-right: -200px; /* Adjust this value as needed */
+  }
+  .bottom_column {
+    flex: 1;
+    max-width: 50%; /* Set maximum width to 50% for two columns */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    margin: 0 5px; /* Add margin to create space between columns */
+  }
+  .block {
+    border-bottom: 1px solid #8d8d8d;
+    padding-top: 20px;
+    width: 100%; /* Set width to 100% for responsiveness */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    max-width: 400px; /* Set maximum width if needed */
+    margin-left: 80px;
+  }
+  .p1, .p2 {
+    font-size: 12px;
+    margin-top: 30px;
+  }
+}
 
 
 
@@ -2139,7 +2242,7 @@ margin-top: 20px;
   margin-top: -10px;
 }
 .page{
-  margin-left: 200px;
+  margin-left: 150px;
   display: flex;
   justify-content: center; 
   align-items: center; 
@@ -2171,17 +2274,29 @@ margin-top: 20px;
   display: flex;
   margin-top: 20px; /* Збільште або зменште цей відступ за потреби */
 }
-
-.bottom_column {
-  max-width: 150px;
-  flex: 50%;
-  padding: 0px;
+.bottom_text {
+  display: flex;
+  justify-content: center; /* Center the columns horizontally */
+  margin-left: 10px; /* Adjust this value as needed */
+  margin-right: -170px; /* Adjust this value as needed */
 }
-
-.p1, .p2 {
+.bottom_column {
   flex: 1;
-  margin-left: 15px; /* Змінено відступ для уникнення налазжання тексту */
+  max-width: 50%; /* Set maximum width to 50% for two columns */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  margin: 0 5px; /* Add margin to create space between columns */
+}
+.block {
+  border-bottom: 1px solid #8d8d8d;
+  padding-top: 20px;
+  width: 100%; /* Set width to 100% for responsiveness */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  max-width: 300px; /* Set maximum width if needed */
+  margin-left: 80px;
+}
+.p1, .p2 {
   font-size: 12px;
+  margin-top: 30px;
 }
 
 /*footer*/
@@ -2375,3 +2490,57 @@ body {
   }
 }
 }
+
+@media (max-width: 350px) {
+  .footer1, .footer-menu, .footer2, .footer_logo, .footer3 {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  .footer1 {
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .footer2 {
+    margin-left: 10px;
+    margin-right: -40px;
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .footer-menu { /* Corrected class name */
+    color: #fff;
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  .footer_logo {
+    margin-top: 30px;
+    margin-left: 60px;
+    height: 20px;
+    max-width: none;
+  }
+
+  .footer3 {
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 10px;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .footer3 a {
+    margin-top: 30px;
+    font-size: 10px;
+    margin-right: 20px;
+    margin-left: 5px;
+    text-align: center;
+  }
+}
+
+
+
+
