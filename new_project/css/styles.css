@@ -471,75 +471,71 @@ body, html {
   flex: 7; /* 70% of the width */
 }
 /*footer*/
-* {
-  margin: 0;
-}
-.content {
- margin-top: 200px;
-}
-.footer {
+.footer_1 {
+  margin-top: 170px;
+  background-color: #525252;
   height: 200px;
-  background: rgb(99, 99, 99);
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center the content horizontally */
 }
-.footer_text{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 10px; 
+.footer_container {
+  width: 980px; /* Set the width of the container */
   display: flex;
+  flex-direction: column; /* Display children elements in a column */
+  align-items: center; /* Center the content vertically */
 }
-.footer1, .footer-menu, .footer2 {
-  flex: 1; 
+.foter_text {
+  text-align: center;
 }
-.footer1{
-  margin-left: -200px;
-  margin-top: 30px;
+.fot_text_1 {
+  margin-top: 40px;
+  margin-left: -700px;
+  color: #fff;
+}
+.email_footer {
+  margin-top: -15px; /* Adjust the margin-top to move the text down */
+  margin-left: -820px;
+  color: #fff;
+}
+.fot_list {
+  margin-top: -60px;
+  margin-left: 500px;
+  list-style: none;
   text-align: left;
-  color: #fff; 
-  font-size: 16px;
-  font-family: 'PT Sans', sans-serif;
-  position: relative;
 }
-.email_footer{
-  color: #fff; 
-  text-decoration: none;
+.footer_menu {
+  text-decoration: underline; /* Add underline to the text */
+  color: #fff;
+  display: block; /* Ensure each list item is a block element */
 }
-/* List styles without bullet points */
-ul {
-  list-style-type: none;
+.footer_menu:hover {
+  text-decoration: none; /* Remove underline on hover, if desired */
 }
-.footer2 {
-  display: inline-block;
-  margin-left: 200px;
-  margin-top: 30px;
-  font-family: 'PT Sans', sans-serif;
+li {
+  margin-bottom: 10px; /* Add a larger margin-bottom for more spacing */
 }
-.footer_menu{
-  color: #fff; 
-  font-size: 16px;
-  line-height: 22px;
-}
-.footer_logo{
-  margin-top: 30px;
-  margin-left: 200px;
-  height: 50px;
+.footer_logo {
+  margin-top: -290px;
+  margin-left: 350px;
+  vertical-align: middle; /* Align the image vertically */
 }
 .footer3 {
-  margin-top: 30px;
-  margin-left: 10px;
-  text-align: left;
-  color: #fff; 
-  font-size: 16px;
-  font-family: 'PT Sans', sans-serif;
+  margin-top: -190px;
+  margin-left: 400px;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* Display children elements in a column */
+  white-space: nowrap;
 }
-.footer3 a{
-  margin-top: 30px;
-  text-align: left;
-  color: #fff; 
-  font-size: 16px;
-  font-family: 'PT Sans', sans-serif;
+.a {
+  color: #fff;
+  text-decoration: underline;
 }
+.a:hover {
+  text-decoration: none; /* Remove underline on hover if desired */
+}
+
 /*modal window*/
 body {
   overflow-x: hidden; /
@@ -654,73 +650,94 @@ body {
   transition: opacity 0.5s;
 }
 
-@media  (min-width: 1001px) and (max-width: 1405px) {
-/*footer*/
-.content {
- margin-top: 200px;
-}
-.footer {
-  height: 200px;
-  background: rgb(99, 99, 99);
-  display: flex;
-  justify-content: space-between; 
-}
-.footer_text{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 10px; /* Add margins if necessary */
-  display: flex;
-}
-.footer1, .footer-menu, .footer2 {
-  flex: 1;
-}
-.footer1{
-  margin-left: -100px;
-  margin-top: 30px;
-  text-align: left;
-  color: #fff; 
-  font-size: 14px;
-  font-family: 'PT Sans', sans-serif;
-}
-ul {
-  list-style-type: none;
-}
-.footer2 {
-  display: inline-block;
-  margin-left: 10px;
-  margin-top: 25px;
-  font-size: 18px;
-}
-.footer_menu{
-  color: #fff; 
-  font-size: 10px;
-  line-height: 16px;
-}
-.footer_logo{
-  margin-top: 30px;
-  margin-left: 60px;
-  height: 20px;
-}
+@media (min-width: 1001px) and (max-width: 1080px) {
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 10px; /* Add margins if necessary */
+    display: flex;
+    margin-top: 30px;
+  }
+  .phone {
+    font-size: 32px;
+    line-height: 36px;
+    margin-left: 350px;
+    margin-top: 0px;
+  
+  }
+  .feedback-link{
+    font-size: 22px;
+    margin-left: 750px;
+    margin-top: 80px;
 
-.footer3 {
-  margin-top: 30px;
-  margin-left: 10px;
-  text-align: left;
-  color: #fff; 
-  font-size: 14px;
-  font-family: 'PT Sans', sans-serif;
-  .a{
-    font-size: 14px;
   }
 }
-.footer3 a{
-  margin-top: 30px;
-  text-align: left;
+
+@media  (min-width: 1001px) and (max-width: 1200px) {
+/*footer*/
+.footer_1 {
+  margin-top: 100px;
+  height: 200px;
+  font-size: 12px;
+}
+.footer_container {
+  width: 980px; /* Set the width of the container */
+  display: flex;
+  flex-direction: column; /* Display children elements in a column */
+  align-items: center; /* Center the content vertically */
+}
+.foter_text {
+  text-align: center;
+}
+.fot_text_1 {
+  margin-top: 40px;
+  margin-left: -700px;
   color: #fff;
-  font-size: 10px;
-  font-family: 'PT Sans', sans-serif;
+}
+.email_footer {
+  margin-top: -15px; /* Adjust the margin-top to move the text down */
+  margin-left: -790px;
+  color: #fff;
+}
+.fot_list {
+  margin-top: -40px;
+  margin-left: 200px;
+  list-style: none;
+  text-align: left;
+}
+.footer_menu {
+  text-decoration: underline; /* Add underline to the text */
+  color: #fff;
+  display: block; /* Ensure each list item is a block element */
+}
+.footer_menu:hover {
+  text-decoration: none; /* Remove underline on hover, if desired */
+}
+li {
+  margin-bottom: 10px; /* Add a larger margin-bottom for more spacing */
+}
+.footer_logo {
+  margin-top: -240px;
+  margin-left: 200px;
+  vertical-align: middle; /* Align the image vertically */
+}
+.footer3 {
+  margin-top: -160px;
+  margin-left: 250px;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* Display children elements in a column */
+  white-space: nowrap;
+}
+.a {
+  color: #fff;
+  text-decoration: underline;
+}
+.a:hover {
+  text-decoration: none; /* Remove underline on hover if desired */
 }
 }
+
 
 
 @media  (min-width: 800px) and (max-width: 1000px) {
@@ -1088,69 +1105,66 @@ margin-top: 20px;
 }
 
 /*footer*/
-* {
-  margin: 0;
-}
-.content {
- margin-top: 200px;
-}
-.footer {
+.footer_1 {
+  margin-top: 90px;
   height: 200px;
-  background: rgb(99, 99, 99);
+  font-size: 12px;
+}
+.footer_container {
+  width: 980px; /* Set the width of the container */
   display: flex;
-  justify-content: space-between; 
+  flex-direction: column; /* Display children elements in a column */
+  align-items: center; /* Center the content vertically */
 }
-.footer_text{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 10px; /* Add margins if necessary */
-  display: flex;
+.foter_text {
+  text-align: center;
 }
-.footer1, .footer-menu, .footer2 {
-  flex: 1;
+.fot_text_1 {
+  margin-top: 40px;
+  margin-left: -550px;
+  color: #fff;
 }
-.footer1{
-  margin-left: 20px;
-  margin-top: 30px;
+.email_footer {
+  margin-top: -15px; /* Adjust the margin-top to move the text down */
+  margin-left: -640px;
+  color: #fff;
+}
+.fot_list {
+  margin-top: -40px;
+  margin-left: 200px;
+  list-style: none;
   text-align: left;
-  color: #fff; 
-  font-size: 14px;
-  font-family: 'PT Sans', sans-serif;
 }
-ul {
-  list-style-type: none;
+.footer_menu {
+  text-decoration: underline; /* Add underline to the text */
+  color: #fff;
+  display: block; /* Ensure each list item is a block element */
 }
-.footer2 {
-  display: inline-block;
-  margin-left: 10px;
-  margin-top: 25px;
-  font-family: 'PT Sans', sans-serif;
-  font-size: 14px;
+.footer_menu:hover {
+  text-decoration: none; /* Remove underline on hover, if desired */
 }
-.footer_menu{
-  color: #fff; 
-  font-size: 10px;
-  line-height: 16px;
+li {
+  margin-bottom: 10px; /* Add a larger margin-bottom for more spacing */
 }
-.footer_logo{
-  margin-top: 30px;
-  margin-left: 60px;
-  height: 20px;
+.footer_logo {
+  margin-top: -240px;
+  margin-left: 200px;
+  vertical-align: middle; /* Align the image vertically */
 }
 .footer3 {
-  margin-top: 30px;
-  margin-left: 10px;
-  text-align: left;
-  color: #fff; 
-  font-size: 14px;
-  font-family: 'PT Sans', sans-serif;
-}
-.footer3 a{
-  margin-top: 30px;
-  text-align: left;
+  margin-top: -160px;
+  margin-left: 250px;
   color: #fff;
-  font-size: 14px;
-  font-family: 'PT Sans', sans-serif;
+  display: flex;
+  flex-direction: column; /* Display children elements in a column */
+  white-space: nowrap;
+}
+.a {
+  color: #fff;
+  text-decoration: underline;
+}
+.a:hover {
+  text-decoration: none; /* Remove underline on hover if desired */
 }
 }
 
@@ -1176,7 +1190,6 @@ ul {
     margin-top: 30px;
   }
 }
-
 
 @media  (max-width: 800px) {
   .container {
@@ -1544,74 +1557,148 @@ margin-top: 20px;
   font-size: 14px;
   margin-top: 30px;
 }
-/*footer*/
-* {
-  margin: 0;
 }
-.content {
- margin-top: 200px;
-}
-.footer {
+
+
+@media screen and (min-width: 751px) and (max-width: 799px) {
+  /*footer*/
+.footer_1 {
+  margin-top: 70px;
   height: 200px;
-  background: rgb(99, 99, 99);
+  font-size: 12px;
+}
+.footer_container {
+  width: 980px; /* Set the width of the container */
   display: flex;
-  justify-content: space-between; 
+  flex-direction: column; /* Display children elements in a column */
+  align-items: center; /* Center the content vertically */
 }
-.footer_text{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 10px; /* Add margins if necessary */
-  display: flex;
+.foter_text {
+  text-align: center;
 }
-.footer1, .footer-menu, .footer2 {
-  flex: 1;
+.fot_text_1 {
+  margin-top: 40px;
+  margin-left: -550px;
+  color: #fff;
 }
-.footer1{
-  margin-left: 20px;
-  margin-top: 30px;
+.email_footer {
+  margin-top: -15px; /* Adjust the margin-top to move the text down */
+  margin-left: -640px;
+  color: #fff;
+}
+.fot_list {
+  margin-top: -40px;
+  margin-left: 200px;
+  list-style: none;
   text-align: left;
-  color: #fff; 
-  font-size: 10px;
-  font-family: 'PT Sans', sans-serif;
 }
-ul {
-  list-style-type: none;
+.footer_menu {
+  text-decoration: underline; /* Add underline to the text */
+  color: #fff;
+  display: block; /* Ensure each list item is a block element */
 }
-.footer2 {
-  display: inline-block;
-  margin-left: 10px;
-  margin-top: 25px;
-  font-family: 'PT Sans', sans-serif;
+.footer_menu:hover {
+  text-decoration: none; /* Remove underline on hover, if desired */
 }
-.footer_menu{
-  color: #fff; 
-  font-size: 10px;
-  line-height: 16px;
+li {
+  margin-bottom: 10px; /* Add a larger margin-bottom for more spacing */
 }
-.footer_logo{
-  margin-top: 30px;
-  margin-left: 60px;
-  height: 20px;
+.footer_logo {
+  margin-top: -240px;
+  margin-left: 200px;
+  vertical-align: middle; /* Align the image vertically */
 }
 .footer3 {
-  margin-top: 30px;
-  margin-left: 10px;
-  text-align: left;
-  color: #fff; 
-  font-size: 10px;
-  font-family: 'PT Sans', sans-serif;
+  margin-top: -160px;
+  margin-left: 250px;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* Display children elements in a column */
+  white-space: nowrap;
 }
-.footer3 a{
-  margin-top: 30px;
-  text-align: left;
+.a {
+  color: #fff;
+  text-decoration: underline;
+}
+.a:hover {
+  text-decoration: none; /* Remove underline on hover if desired */
+}
+}
+
+
+
+
+@media screen and (min-width: 600px) and (max-width: 750px) {
+/*footer*/
+.footer_1 {
+  margin-top: 70px;
+  height: 200px;
+  font-size: 12px;
+}
+.footer_container {
+  width: 980px; /* Set the width of the container */
+  display: flex;
+  flex-direction: column; /* Display children elements in a column */
+  align-items: center; /* Center the content vertically */
+}
+.foter_text {
+  text-align: center;
+}
+.fot_text_1 {
+  margin-top: 40px;
+  margin-left: -400px;
+  color: #fff;
+  font-size: 11px;
+}
+.email_footer {
+  margin-top: -15px; /* Adjust the margin-top to move the text down */
+  margin-left: -490px;
   color: #fff;
   font-size: 10px;
-  font-family: 'PT Sans', sans-serif;
+}
+.fot_list {
+  margin-top: -40px;
+  margin-left: 190px;
+  list-style: none;
+  text-align: left;
+  font-size: 11px;
+}
+.footer_menu {
+  text-decoration: underline; /* Add underline to the text */
+  color: #fff;
+  display: block; /* Ensure each list item is a block element */
+}
+.footer_menu:hover {
+  text-decoration: none; /* Remove underline on hover, if desired */
+}
+li {
+  margin-bottom: 10px; /* Add a larger margin-bottom for more spacing */
+}
+.footer_logo {
+  width: 25px;
+  margin-top: -240px;
+  margin-left: 100px;
+  vertical-align: middle; /* Align the image vertically */
+}
+.footer3 {
+  margin-top: -150px;
+  margin-left: 130px;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* Display children elements in a column */
+  white-space: nowrap;
+}
+.a {
+  color: #fff;
+  text-decoration: underline;
+}
+.a:hover {
+  text-decoration: none; /* Remove underline on hover if desired */
 }
 }
 
 
-@media screen and (min-width: 500px) and (max-width: 760px) {
+@media screen and (min-width: 480px) and (max-width: 599px) {
   .container {
     max-width: 620px;
     overflow-x: hidden;
@@ -1662,6 +1749,72 @@ ul {
 .p1, .p2{
   font-size: 14px;
   margin-top: 30px;
+}
+/*footer*/
+.footer_1 {
+  margin-top: 70px;
+  height: 200px;
+  font-size: 12px;
+}
+.footer_container {
+  width: 380px; /* Set the width of the container */
+  display: flex;
+  flex-direction: column; /* Display children elements in a column */
+  align-items: center; /* Center the content vertically */
+}
+.foter_text {
+  text-align: center;
+}
+.fot_text_1 {
+  margin-top: 40px;
+  margin-left: -300px;
+  color: #fff;
+  font-size: 11px;
+}
+.email_footer {
+  margin-top: -15px; /* Adjust the margin-top to move the text down */
+  margin-left: -390px;
+  color: #fff;
+  font-size: 10px;
+}
+.fot_list {
+  margin-top: -40px;
+  margin-left: 170px;
+  list-style: none;
+  text-align: left;
+  font-size: 11px;
+}
+.footer_menu {
+  text-decoration: underline; /* Add underline to the text */
+  color: #fff;
+  display: block; /* Ensure each list item is a block element */
+}
+.footer_menu:hover {
+  text-decoration: none; /* Remove underline on hover, if desired */
+}
+li {
+  margin-bottom: 10px; /* Add a larger margin-bottom for more spacing */
+}
+.footer_logo {
+  width: 15px;
+  margin-top: -240px;
+  margin-left: 50px;
+  vertical-align: middle; /* Align the image vertically */
+}
+.footer3 {
+  margin-top: -150px;
+  margin-left: 70px;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* Display children elements in a column */
+  white-space: nowrap;
+}
+.a {
+  color: #fff;
+  text-decoration: underline;
+}
+.a:hover {
+  text-decoration: none; /* Remove underline on hover if desired */
 }
 }
 
@@ -2299,70 +2452,6 @@ margin-top: 20px;
   margin-top: 30px;
 }
 
-/*footer*/
-* {
-  margin: 0;
-}
-.content {
- margin-top: 200px;
-}
-.footer {
-  height: 200px;
-  background: rgb(99, 99, 99);
-  display: flex;
-  justify-content: space-between;
-}
-.footer_text{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 10px; 
-  display: flex;
-}
-.footer1, .footer-menu, .footer2 {
-  flex: 1; 
-}
-.footer1{
-  margin-left: 20px;
-  margin-top: 30px;
-  text-align: left;
-  color: #fff; 
-  font-size: 10px;
-  font-family: 'PT Sans', sans-serif;
-}
-ul {
-  list-style-type: none;
-}
-.footer2 {
-  display: inline-block;
-  margin-left: 10px;
-  margin-top: 25px;
-  font-family: 'PT Sans', sans-serif;
-}
-.footer_menu{
-  color: #fff; 
-  font-size: 10px;
-  line-height: 16px;
-}
-.footer_logo{
-  margin-top: 30px;
-  margin-left: 60px;
-  height: 20px;
-}
-.footer3 {
-  margin-top: 30px;
-  margin-left: 10px;
-  text-align: left;
-  color: #fff; 
-  font-size: 10px;
-  font-family: 'PT Sans', sans-serif;
-}
-.footer3 a{
-  margin-top: 30px;
-  text-align: left;
-  color: #fff; 
-  font-size: 10px;
-  font-family: 'PT Sans', sans-serif;
-}
 body {
   overflow-x: hidden; 
 }
@@ -2454,9 +2543,6 @@ body {
   transition: opacity 0.5s;
 }
 
-
-
-
 @media (min-width: 601px) and (max-width: 709px) {
   .container {
     max-width: 600px;
@@ -2496,34 +2582,29 @@ body {
     flex: 1;
     max-width: 100%;
   }
-
   .footer1 {
     margin-left: 20px;
     margin-top: 30px;
     font-size: 10px;
     text-align: center;
   }
-
   .footer2 {
     margin-left: 10px;
     margin-right: -40px;
     margin-top: 25px;
     text-align: center;
   }
-
   .footer-menu { /* Corrected class name */
     color: #fff;
     font-size: 10px;
     line-height: 16px;
   }
-
   .footer_logo {
     margin-top: 30px;
     margin-left: 60px;
     height: 20px;
     max-width: none;
   }
-
   .footer3 {
     margin-top: 30px;
     margin-left: 10px;
@@ -2531,7 +2612,6 @@ body {
     margin-right: 20px;
     text-align: center;
   }
-
   .footer3 a {
     margin-top: 30px;
     font-size: 10px;
@@ -2541,6 +2621,93 @@ body {
   }
 }
 
+@media (min-width: 320px) and (max-width: 479px) {
+  /*footer*/
+  .footer_1 {
+    margin-top: 70px;
+    height: 300px;
+  }
+  .footer_container {
+    width: 380px; /* Set the width of the container */
+    display: flex;
+    flex-direction: column; /* Display children elements in a column */
+    align-items: center; /* Center the content vertically */
+  }
+  .foter_text {
+    text-align: center;
+  }
+  .fot_text_1 {
+    margin-top: 40px;
+    margin-left: -100px;
+    color: #fff;
+    font-size: 12px;
+  }
+  .email_footer {
+    margin-top: -15px; /* Adjust the margin-top to move the text down */
+    margin-left: -180px;
+    color: #fff;
+    font-size: 12px;
+  }
+  .fot_list {
+    margin-top: 30px;
+    margin-left: -130px;
+    list-style: none;
+    text-align: left;
+    font-size: 12px;
+  }
+  .footer_menu {
+    text-decoration: underline; /* Add underline to the text */
+    color: #fff;
+    display: block; /* Ensure each list item is a block element */
+  }
+  .footer_menu:hover {
+    text-decoration: none; /* Remove underline on hover, if desired */
+  }
+  li {
+    margin-bottom: 10px; /* Add a larger margin-bottom for more spacing */
+  }
+  .footer_logo {
+    width: 15px;
+    margin-top: 10px;
+    margin-left: -40px;
+    vertical-align: middle; /* Align the image vertically */
+  }
+  .footer3 {
+    margin-top: -20px;
+    margin-left: -20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Display children elements in a column */
+    white-space: nowrap;
+  }
+  .a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .a:hover {
+    text-decoration: none; /* Remove underline on hover if desired */
+  }
+  }
 
-
-
+  @media (min-width: 640px) and (max-width: 740px) {
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 10px; /* Add margins if necessary */
+      display: flex;
+      margin-top: 30px;
+    }
+    .phone {
+      font-size: 22px;
+      line-height: 24px;
+      margin-top: 0px;
+      margin-left: 100px;
+    }
+    .feedback-link{
+      font-size: 18px;
+      margin-left: 400px;
+      margin-top: 50px;
+  
+    }
+  }
+  
