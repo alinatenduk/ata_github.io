@@ -5,7 +5,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height:100%;
 }
 .container {
   max-width: 980px;
@@ -248,8 +248,8 @@ body, html {
   margin-top: 5px;
 }
 .content_list{
-  display: inline-block; /* Розміщує блок в один рядок */
-  white-space: nowrap; /* Запобігає переносу тексту на новий рядок */
+  display: inline-block; 
+  white-space: nowrap; 
 }
 .litle_list.underline{
   text-decoration: underline;
@@ -302,12 +302,9 @@ body, html {
   display: block;
 }
 .submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  padding: 10px;
+  margin-top: -1px;
+  font-size: 14px;
+  padding: 10px; /* Add padding for better visibility */
 }
 .menu_left.submenu {
   position: absolute;
@@ -321,7 +318,7 @@ body, html {
   display: block;
 }
 .main-menu-item:hover ~ * {
-  margin-top: 110px;
+  margin-top: 150px;
 }
 .main-menu-item:hover ~ * + .big_list {
   margin-top: 20px;
@@ -535,7 +532,16 @@ li {
 .a:hover {
   text-decoration: none; /* Remove underline on hover if desired */
 }
+.wrapper {
+  flex: 1;
+}
 
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
 /*modal window*/
 body {
   overflow-x: hidden; /
@@ -679,6 +685,8 @@ body {
   margin-top: 100px;
   height: 200px;
   font-size: 12px;
+  position: fixed;
+  overflow: hidden;
 }
 .footer_container {
   width: 980px; /* Set the width of the container */
@@ -736,6 +744,7 @@ li {
 .a:hover {
   text-decoration: none; /* Remove underline on hover if desired */
 }
+
 }
 
 
@@ -946,7 +955,7 @@ li {
   top: 100%;
   left: 0;
   background: #fff;
-  padding: 10px;
+  padding: 1px;
 }
 .menu_left.submenu {
   position: absolute;
@@ -960,7 +969,7 @@ li {
   display: block;
 }
 .main-menu-item:hover ~ * {
-  margin-top: 110px;
+  margin-top: 140px;
 }
 .main-menu-item:hover ~ * + .big_list {
   margin-top: 20px;
@@ -1189,6 +1198,44 @@ li {
     font-size: 14px;
     margin-top: 30px;
   }
+
+/*left block*/
+    .menu_left {
+      list-style-type: none;
+      padding-left: 10px;
+      line-height: 20px;
+      white-space: nowrap;
+    }
+    .menu_left a {
+      text-decoration: none; 
+      color: #000; 
+    }
+  .menu_left li:hover .litle_list {
+    display: block;
+  }
+  .submenu{
+    font-size: 13px;
+    margin-top: 2px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+  }
+  .big_list{
+    text-align: left;
+    margin: 10px 10px;
+    font-size: 18px;
+    line-height: 16px;
+    list-style: none;
+    color: #4e4e4e; 
+    font-family: 'PT Sans', sans-serif;
+  }
+  .litle_list{
+    display: none;
+    font-size: 16px;
+    color: #4e4e4e; 
+    font-family: 'PT Sans', sans-serif;
+    line-height: 22px;
+  }
+  
 }
 
 @media  (max-width: 800px) {
@@ -1394,14 +1441,14 @@ li {
   position: absolute;
   top: 100%;
   background: #fff;
-  padding: 10px;
+  padding: 1px;
   font-size: 14px;
+  margin-left: 15px;
 }
 .menu_left.submenu {
   position: absolute;
   bottom: -100%; 
   left: 10px;
-
   padding: 10px;
   display: none;
 }
@@ -1409,7 +1456,7 @@ li {
   display: block;
 }
 .main-menu-item:hover ~ * {
-  margin-top: 110px;
+  margin-top: 150px;
 }
 .main-menu-item:hover ~ * + .big_list {
   margin-top: 20px;
@@ -1842,7 +1889,6 @@ li {
       font-size: 18px;
       line-height: 28px;
       margin-top: 5px;
-      margin-left: 90px;
       text-transform: uppercase; 
   }
   .feedback-link{
@@ -1862,6 +1908,11 @@ li {
 .content_menu{
   text-align: left;
 }
+.submenu {
+  margin-top: -1px;
+  font-size: 10px;
+  padding: 10px; /* Add padding for better visibility */
+}
 .list{
   list-style: none; 
   padding: 0; 
@@ -1870,8 +1921,8 @@ li {
 }
 .content_list{
   font-size: 10px;
-  display: inline-block; /* Розміщує блок в один рядок */
-  white-space: nowrap; /* Запобігає переносу тексту на новий рядок */
+  display: inline-block; 
+  white-space: nowrap; 
 }
 .litle_list.underline{
   text-decoration: underline;
@@ -1917,11 +1968,12 @@ li {
 .menu_left li:hover .litle_list {
   display: block;
 }
+
 .big_list{
   text-align: left;
   margin: 10px 100px;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 13px;
   list-style: none;
   color: #4e4e4e; 
   font-family: 'PT Sans', sans-serif;
@@ -1933,6 +1985,7 @@ li {
   font-family: 'PT Sans', sans-serif;
   line-height: 22px;
 }
+
 .icon{
   height: 70px;
   padding-top: 95px;
@@ -2162,12 +2215,50 @@ body {
     font-size: 12px;
     margin-top: 30px;
   }
+  .main-menu-item:hover ~ * {
+    margin-top: 110px;
+  }
+  .main-menu-item:hover ~ * + .big_list {
+    margin-top: 20px;
+  }
 }
 
 
 
 
-
+@media (min-width: 480px) and (max-width: 650px) {
+  .container {
+    text-align: center;
+    max-width: 300px;
+  }
+  .logo{
+    height: 50px;
+  }
+  .abc{
+    font-size: 18px;
+    text-align: left;
+    line-height: 16px;
+    margin-top: 0px;
+  }
+  .slogan{
+    font-size: 10px;
+    margin-top: 40px;
+    margin-left: -85px;
+  }
+  .phone {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: -1px;
+    margin-left: -5px;
+    text-transform: uppercase; 
+  }
+  .feedback-link{
+    font-size: 10px;
+    line-height: 28px;
+    margin-top: 32px;
+    margin-left: 200px;
+  }
+}
 
 
 
@@ -2203,7 +2294,7 @@ body {
     font-size: 10px;
     line-height: 28px;
     margin-top: 32px;
-    margin-left: 180px;
+    margin-left: 200px;
   }
 /*menu*/
 .burger{
@@ -2308,6 +2399,12 @@ body {
   }
 .menu_left li:hover .litle_list {
   display: block;
+}
+.submenu{
+  font-size: 10px;
+  margin-top: 2px;
+  padding-bottom: 1px;
+  padding-top: 1px;
 }
 .big_list{
   text-align: left;
@@ -2577,55 +2674,12 @@ body {
 }
 }
 
-@media (max-width: 350px) {
-  .footer1, .footer-menu, .footer2, .footer_logo, .footer3 {
-    flex: 1;
-    max-width: 100%;
-  }
-  .footer1 {
-    margin-left: 20px;
-    margin-top: 30px;
-    font-size: 10px;
-    text-align: center;
-  }
-  .footer2 {
-    margin-left: 10px;
-    margin-right: -40px;
-    margin-top: 25px;
-    text-align: center;
-  }
-  .footer-menu { /* Corrected class name */
-    color: #fff;
-    font-size: 10px;
-    line-height: 16px;
-  }
-  .footer_logo {
-    margin-top: 30px;
-    margin-left: 60px;
-    height: 20px;
-    max-width: none;
-  }
-  .footer3 {
-    margin-top: 30px;
-    margin-left: 10px;
-    font-size: 10px;
-    margin-right: 20px;
-    text-align: center;
-  }
-  .footer3 a {
-    margin-top: 30px;
-    font-size: 10px;
-    margin-right: 20px;
-    margin-left: 5px;
-    text-align: center;
-  }
-}
-
 @media (min-width: 320px) and (max-width: 479px) {
   /*footer*/
   .footer_1 {
     margin-top: 70px;
-    height: 300px;
+    height: 320px;
+    margin-bottom: -200px;
   }
   .footer_container {
     width: 380px; /* Set the width of the container */
@@ -2709,5 +2763,6 @@ body {
       margin-top: 50px;
   
     }
+    
   }
   
